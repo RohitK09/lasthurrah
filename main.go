@@ -9,7 +9,7 @@ import (
 func main() {
 	r := gin.Default()
     client := redis.NewClient(&redis.Options{
-		Addr: "redis:6379",
+		Addr: "localhost:6379",
 		Password: "",
 		DB: 0,
 	})
@@ -39,8 +39,4 @@ func main() {
 
     })
 	r.Run(":8080")
-}
-
-func getcounter() {
-    
 }
